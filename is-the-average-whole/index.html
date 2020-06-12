@@ -4,6 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Is The Average Whole</title>
+    <script>
+
+        function isTheAverageWhole (numbersArray) {
+            var sum = null;
+            var stringAverage = null;
+            var floatValue = null;
+            for (var index = 0; index < numbersArray.length; index++) {
+                sum += numbersArray[index];
+            }
+            stringAverage = (sum / numbersArray.length).toString();
+            if (stringAverage.indexOf(".") === -1) {
+                return true
+            }
+            for (var stIndex = stringAverage.length-1; stIndex >= 0; stIndex--) {
+                if( stringAverage[stIndex] === ".") {
+                    break;
+                }
+                floatValue += Number(stringAverage[stIndex])
+            }
+            if (floatValue > 0) {
+                return false
+            } else {
+                return true
+            }
+        }
+
+
+        function isTheAverageWholeMethod(numbersArray) {
+            var result = 0;
+            for (var i = 0; i < numbersArray.length; i++) {
+                result += numbersArray[i]
+            }
+            var average = result / numbersArray.length
+            return Number.isInteger(average)
+    }
+
+    </script>
 </head>
 <body>
 
