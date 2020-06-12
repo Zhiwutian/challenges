@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PH Analyzer</title>
     <script>
+        function phAnalyzer2(pH) {
+            if(pH < 7 ){
+                return "acidic"
+            } else if (pH === 7) {
+                return "neutral"
+            } else if (pH < 15) {
+                return "alkaline"
+            } else {
+                return "Invalid ph value"
+            }
+        }
 
         function phAnalyzer(pH) {
             switch(pH){
