@@ -30,6 +30,16 @@
             }
         }
 
+        function isTheAverageWholeParse (numbersArray) {
+            var sum = null;
+            var average = null;
+            for (var index = 0; index < numbersArray.length; index++) {
+                sum += numbersArray[index];
+            }
+            average = (sum / numbersArray.length)
+            return average === parseInt(average)
+}
+
 
         function isTheAverageWholeMethod(numbersArray) {
             var result = 0;
