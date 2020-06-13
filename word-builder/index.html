@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word-builder</title>
+    <script>
+
+        function wordBuilder(wordToSpell) {
+            var wordArray = [];
+            var stringToPush = ''
+            var indexesToPush = 0
+            for(var index = 0; index < wordToSpell.length; index++) {
+                for (wordIndex = 0 ; wordIndex <= indexesToPush; wordIndex++) {
+                    stringToPush += wordToSpell[wordIndex]
+                }
+                wordArray.push(stringToPush)
+                stringToPush = '';
+                indexesToPush++
+            }
+            return wordArray;
+        }
+
+        function wordBuilder2(wordToSpell) {
+            var placeholder = ''
+            var result = []
+            for(var i = 0; i < wordToSpell.length; i++) {
+                placeholder+=wordToSpell[i]
+                result.push(placeholder)
+            }
+            return result
+            }
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
