@@ -19,6 +19,16 @@
             return returnString;
         }
 
+        function createRepeatingLetters2(word, numOfRepeats) {
+      var result = '';
+      for(var i = 0; i < word.length; i++) {
+        for(var x = 0; x < numOfRepeats; x++) {
+          result += word[i]
+        }
+      }
+      return result
+    }
+
     </script>
 </head>
 <body>
