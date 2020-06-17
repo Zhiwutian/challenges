@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Coffee Cups</title>
+
+    <script>
+
+        function freeCoffeeCupsMath(coffeeCups) {
+
+            var divideValue = Math.floor(coffeeCups / 6);
+            return coffeeCups+=divideValue;
+
+        }
+
+        function freeCoffeeCupsLoop(cups) {
+            var freeCups = 0;
+            for(var i = 0; i <= cups; i++) {
+                if(i % 6 === 0 && i) {
+                freeCups++
+                }
+            }
+            return cups + freeCups
+            }
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
