@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payscale calculator</title>
+
+    <script>
+
+        function payScaleAnalyzer(payList) {
+            var minNum = Infinity;
+            var maxNum = -Infinity;
+
+            for(var index = 0; index < payList.length; index++){
+                if(payList[index] < minNum) {
+                    minNum = payList[index];
+                }
+                if(payList[index] > maxNum) {
+                    maxNum = payList[index]
+                }
+            }
+            return maxNum - minNum;
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
