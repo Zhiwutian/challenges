@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Minutes To Seconds</title>
+
+    <script>
+        function convertMinutesToSecondsReturn(timeToConvert) {
+            return (parseInt(timeToConvert.slice(0,3)) * 60) + parseInt(timeToConvert.slice(3))
+        }
+
+        function convertMinutesToSeconds(timeToConvert) {
+            var mins = parseInt(timeToConvert.slice(0,3))
+            var secs = parseInt(timeToConvert.slice(3))
+            var total = (mins * 60) + secs;
+            return total;
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
