@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Calculator</title>
+    <script>
+
+        function volumeCalculator(boxesArray) {
+            var totalVolume = null;
+
+            for(var arrayIndex = 0; arrayIndex < boxesArray.length; arrayIndex++) {
+                var volume = [];
+                for (var boxIndex = 0; boxIndex < boxesArray[arrayIndex].length; boxIndex++) {
+                    volume.push(boxesArray[arrayIndex][boxIndex])
+                }
+                totalVolume += (volume[0] * volume[1] * volume[2]);
+            }
+            return totalVolume;
+        }
+
+        function volumeCalculatorReturn(boxesArray) {
+            return (boxesArray[0][0] * boxesArray[0][1] * boxesArray[0][2]) + (boxesArray[1][0] * boxesArray[1][1] * boxesArray[1][2]) + (boxesArray[2][0] * boxesArray[2][1] * boxesArray[2][2])
+        }
+
+        function volumeCalculatorUzair(boxesArray) {
+            var result = 0;
+            for(var i = 0; i < boxesArray.length; i++) {
+                var initialResult = 1;
+                for(var x = 0; x < boxesArray[i].length; x++) {
+                initialResult *= boxesArray[i][x]
+                }
+                result += initialResult
+            }
+            return result
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
