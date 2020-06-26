@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Nemo</title>
+
+    <script>
+        function findingNemoIndex(sentence) {
+            var wordArray = [];
+            var wordToPush = "";
+            for (var index = 0; index < sentence.length; index++) {
+                if(sentence[index] !== " ") {
+                    wordToPush += sentence[index];
+                } else {
+                    wordArray.push(wordToPush)
+                    wordToPush = "";
+                }
+            }
+            wordArray.push(wordToPush);
+            return wordArray.indexOf("Nemo") + 1;
+        }
+
+
+        function findingNemoPure(sentence) {
+            var word = ''
+            var result = []
+            for(var i = 0; i <= sentence.length; i++) {
+                if(sentence[i] !== ' ' && sentence[i]) {
+                word += sentence[i]
+                } else {
+                result.push(word)
+                word = ''
+                }
+            }
+
+            for(var x = 0; x < result.length; x++) {
+                if(result[x] === 'Nemo') {
+                return x + 1
+                }
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

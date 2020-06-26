@@ -16,7 +16,15 @@
         }
 
         function isSantaComing2(dateObject) {
-            return dateObject.getMonth() === 11 && dateObject.getDate() === 24
+            var month = dateObject.getMonth();
+            var day = dateObject.getDate();
+
+            if (month === 11 && day === 24) {
+                return true;
+            } else {
+                return false;
+            }
+            // return dateObject.getMonth() === 11 && dateObject.getDate() === 24
          }
 
 
