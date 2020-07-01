@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Filter</title>
+    <script>
+
+        function digitFilter(numbersArray, numberFilter) {
+            var returnArray = [];
+
+            for (var index = 0; index < numbersArray.length; index++) {
+                if(numbersArray[index].toString().length === numberFilter) {
+                    returnArray.push(numbersArray[index])
+                }
+            }
+            return returnArray;
+
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
