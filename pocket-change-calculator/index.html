@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Change Calculator</title>
+    <script>
+
+        function pocketChangeCalculator(changeArray, itemCost) {
+            var total = 0;
+
+            for(var index = 0; index < changeArray.length; index++) {
+                switch(index) {
+                    case 0:
+                        total += changeArray[index] * 25
+                        break;
+                    case 1:
+                        total += changeArray[index] * 10
+                        break;
+                    case 2:
+                        total += changeArray[index] * 5
+                        break;
+                    case 3:
+                        total += changeArray[index]
+                    default:
+                        "something went wrong"
+                }
+            }
+            return total/100 >= itemCost;
+
+        }
+
+
+        function pocketChangeCalculatorDirect(changeArray, itemCost) {
+            var quarters = changeArray[0] * .25
+            var dimes = changeArray[1] * .10
+            var nickels = changeArray[2] * .05
+            var pennies = changeArray[3] * .01
+
+            return itemCost <= quarters + dimes + nickels + pennies
+            }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
