@@ -6,19 +6,9 @@
     <title>Finding Nemo</title>
 
     <script>
-        function findingNemoIndex(sentence) {
-            var wordArray = [];
-            var wordToPush = "";
-            for (var index = 0; index < sentence.length; index++) {
-                if(sentence[index] !== " ") {
-                    wordToPush += sentence[index];
-                } else {
-                    wordArray.push(wordToPush)
-                    wordToPush = "";
-                }
-            }
-            wordArray.push(wordToPush);
-            return wordArray.indexOf("Nemo") + 1;
+
+        function findingNemo(sentence) {
+            return sentence.split(' ').indexOf('Nemo') + 1
         }
 
 
@@ -41,6 +31,28 @@
             }
 
         }
+
+
+
+
+
+        function findingNemoIndex(sentence) {
+            var wordArray = [];
+            var wordToPush = "";
+            for (var index = 0; index < sentence.length; index++) {
+                if(sentence[index] !== " ") {
+                    wordToPush += sentence[index];
+                } else {
+                    wordArray.push(wordToPush)
+                    wordToPush = "";
+                }
+            }
+            wordArray.push(wordToPush);
+            return wordArray.indexOf("Nemo") + 1;
+        }
+
+
+
 
 
     </script>
