@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Zeros</title>
+
+    <script>
+
+        function clearZeros(numberString) {
+            return Number(numberString).toString()
+        }
+
+
+
+        function clearZeros(numberString) {
+            var splitNumbers = numberString.split(".")
+            var zeroCheck = false;
+            var returnString = ""
+            var trailingArray = []
+
+            for (var index = 0; index < splitNumbers[0].length; index++) {
+                if(splitNumbers[0][index] !== "0") {
+                    zeroCheck = true;
+                }
+                if (zeroCheck){
+                    returnString += splitNumbers[0][index];
+                }
+            }
+            zeroCheck = false;
+            for(var index = splitNumbers[1].length-1; index >= 0; index--) {
+                if (splitNumbers[1][index] !== "0") {
+                    zeroCheck = true;
+                }
+                if(zeroCheck) {
+                    trailingArray.unshift(splitNumbers[1][index])
+                }
+            }
+            var trailingString = trailingArray.join("")
+            return returnString + "." + trailingString;
+
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
