@@ -24,6 +24,24 @@
 
         }
 
+        function fogClearer2(stringToClear) {
+        var newString = ''
+        for(var i = 0; i < stringToClear.length; i++) {
+            if(
+            stringToClear[i] !== 'f' &&
+            stringToClear[i] !== 'o' &&
+            stringToClear[i] !== 'g'
+            ) {
+            newString += stringToClear[i]
+            }
+        }
+        if(stringToClear === newString) {
+            return "It's a clear day!"
+        } else {
+            return newString
+        }
+        }
+
 
     </script>
 </head>
